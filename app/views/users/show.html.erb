@@ -10,10 +10,10 @@
     <br>
 <div class='container'>
     <div class = 'col-md-8'>
-        <%= render partial: 'items/item', locals:{item: @item} %>
+        <%= render partial: 'items/item', locals:{user: @user, item: @item} %>
     </div>
     <br>
     <div class= 'col-md-8'>
-        <%= render partial: 'items/form', locals:{item: @item} %>
+        <%= render partial: 'items/form', locals:{user: @user, item: @items} %>
     </div>
 </div>
