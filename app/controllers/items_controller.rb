@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
         end
         
         respond_to do |format|
-            format.html {redirect_to 'user#show'}
+            format.html {redirect_to user_path}
             format.js {render :layout => false}
         end
 
