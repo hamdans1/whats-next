@@ -6,6 +6,8 @@ class UsersController < ApplicationController
 
     def show
         @user = current_user
+        @item = Item.new
+        @items = @user.items
 
         if @user.nil?
             redirect_to new_user_registration_path

@@ -1,0 +1,11 @@
+<% @items.each do |item| %>
+<div class="media">
+    <div class="media-body">
+        <h3><%= item.name %></h3>
+        <br>
+        <small>
+            created <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.email %> 
+        </small>
+    </div>
+</div>
+<% end %>

@@ -1,8 +1,19 @@
 <div class='container'>
-    <div>
+    <div class='col-md-8'>
         <h1> <%= @user.email %> </h1>
+            <small>
+            Created: <%= @user.created_at %> <br>
+            Last Updated: <%= @user.updated_at %>
+            </small>
     </div>
-    <div class="row">
-        Created: <%= @user.created_at %> - Last Updated <%= @user.updated_at %>
+</div>
+    <br>
+<div class='container'>
+    <div class = 'col-md-8'>
+        <%= render partial: 'items/item', locals:{item: @item} %>
+    </div>
+    <br>
+    <div class= 'col-md-8'>
+        <%= render partial: 'items/form', locals:{item: @item} %>
     </div>
 </div>
