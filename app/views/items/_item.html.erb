@@ -6,6 +6,7 @@
         <small>
             created <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.email %> 
         </small>
+        <%= link_to "Done!", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
     </div>
 </div>
 <% end %>
